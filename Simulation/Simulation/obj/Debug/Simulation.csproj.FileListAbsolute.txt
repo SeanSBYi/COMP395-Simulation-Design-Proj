@@ -1,0 +1,6 @@
+F:\Projects\Github\COMP395-Simulation-Design\Simulation\Simulation\bin\Debug\Simulation.exe.config
+F:\Projects\Github\COMP395-Simulation-Design\Simulation\Simulation\bin\Debug\Simulation.exe
+F:\Projects\Github\COMP395-Simulation-Design\Simulation\Simulation\bin\Debug\Simulation.pdb
+F:\Projects\Github\COMP395-Simulation-Design\Simulation\Simulation\obj\Debug\Simulation.csprojResolveAssemblyReference.cache
+F:\Projects\Github\COMP395-Simulation-Design\Simulation\Simulation\obj\Debug\Simulation.exe
+F:\Projects\Github\COMP395-Simulation-Design\Simulation\Simulation\obj\Debug\Simulation.pdb

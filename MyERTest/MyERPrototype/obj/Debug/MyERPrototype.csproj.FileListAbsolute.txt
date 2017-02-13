@@ -1,0 +1,9 @@
+c:\users\isuryun\documents\visual studio 2015\Projects\MyERPrototype\MyERPrototype\bin\Debug\MyERPrototype.exe.config
+C:\Users\isuryun\documents\visual studio 2015\Projects\MyERPrototype\MyERPrototype\bin\Debug\MyERPrototype.exe
+C:\Users\isuryun\documents\visual studio 2015\Projects\MyERPrototype\MyERPrototype\bin\Debug\MyERPrototype.pdb
+C:\Users\isuryun\documents\visual studio 2015\Projects\MyERPrototype\MyERPrototype\obj\Debug\MyERPrototype.csprojResolveAssemblyReference.cache
+C:\Users\isuryun\documents\visual studio 2015\Projects\MyERPrototype\MyERPrototype\obj\Debug\MyERPrototype.Properties.Resources.resources
+C:\Users\isuryun\documents\visual studio 2015\Projects\MyERPrototype\MyERPrototype\obj\Debug\MyERPrototype.csproj.GenerateResource.Cache
+C:\Users\isuryun\documents\visual studio 2015\Projects\MyERPrototype\MyERPrototype\obj\Debug\MyERPrototype.exe
+C:\Users\isuryun\documents\visual studio 2015\Projects\MyERPrototype\MyERPrototype\obj\Debug\MyERPrototype.pdb
+C:\Users\isuryun\documents\visual studio 2015\Projects\MyERPrototype\MyERPrototype\obj\Debug\MyERPrototype.Prototype.resources
