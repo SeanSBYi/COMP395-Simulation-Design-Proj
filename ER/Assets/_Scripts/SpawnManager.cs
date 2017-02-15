@@ -24,21 +24,29 @@ public class SpawnManager : MonoBehaviour {
             GameObject sufferer = Instantiate(Sufferer, new Vector3(-12.0f, 0f, 0f), Quaternion.identity);
 
             int conditionRnd = Random.Range(0, 100);
-            if (conditionRnd > 50) // 100 > g > 50
+            if (conditionRnd > 65)
             {
                 sufferer.GetComponent<MySuffererController>().SetCondition(MySuffererController.eCondition.eGreen);
             }
-            else if (conditionRnd > 15) // 50 > y > 15
+            else if (conditionRnd > 30)
             {
                 sufferer.GetComponent<MySuffererController>().SetCondition(MySuffererController.eCondition.eYellow);
             }
-            else // 15 > r
+            else
             {
                 sufferer.GetComponent<MySuffererController>().SetCondition(MySuffererController.eCondition.eRed);
             }
         }
         float rnd = Random.Range(MinSpawnRangeTime, MaxSpawnRangeTime);
         Invoke("SpawnSufferer", rnd);
+    }
+
+    public void PatientGoingOut()
+    {
+        iNowSuffererCnt--;
+        
+        if(iNowSuffererCnt < 0)
+            iNowSuffererCnt = 0;
     }
 
     // Use this for initialization
