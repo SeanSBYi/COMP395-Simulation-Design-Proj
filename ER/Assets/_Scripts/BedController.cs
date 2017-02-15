@@ -27,7 +27,7 @@ public class BedController : MonoBehaviour {
             Debug.DrawRay(transform.position, transform.forward * 100f, Color.green, 20);
 
             if (Physics.Raycast(ray, out hit))
-            {          
+            {
                 // ?: conditional operator.  
                 isActive = (isActive == true) ? false : true;
 
