@@ -20,6 +20,7 @@ public class SpawnManager : MonoBehaviour {
     public int iNowSuffererCnt;
 
     private GameObject gb;
+    public GameObject sliderPatient;
     private Slider slider1;
 
     void SpawnSufferer()
@@ -69,12 +70,12 @@ public class SpawnManager : MonoBehaviour {
         iNowSuffererCnt = 0;
         Invoke("SpawnSufferer", 3);
 
-        gb = GameObject.Find("PatientSlider");
-        slider1 = gb.GetComponent<Slider>();
+        //gb = GameObject.Find("PatientSlider");
+        slider1 = sliderPatient.GetComponent<Slider>();
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
         MaxSufferer = (int)slider1.value;
 	}
 }
