@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpawnManager : MonoBehaviour {
     public bool enableSpawn = false;
@@ -17,6 +18,9 @@ public class SpawnManager : MonoBehaviour {
     public int MaxSufferer = 10;
 
     public int iNowSuffererCnt;
+
+    private GameObject gb;
+    private Slider slider1;
 
     void SpawnSufferer()
     {
@@ -64,11 +68,14 @@ public class SpawnManager : MonoBehaviour {
     void Start () {
         iNowSuffererCnt = 0;
         Invoke("SpawnSufferer", 3);
+
+        gb = GameObject.Find("PatientSlider");
+        slider1 = gb.GetComponent<Slider>();
     }
 	
 	// Update is called once per frame
 	void Update () {
-		
+        MaxSufferer = (int)slider1.value;
 	}
 }
 

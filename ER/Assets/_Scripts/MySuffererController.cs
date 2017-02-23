@@ -42,6 +42,7 @@ public class MySuffererController : MonoBehaviour {
     public float speed = 10.0f;
 
     private float fHP;
+    private bool bRecoverHP;
 
 
     private float MinSpawnRangeHP = 5.0f;
@@ -101,8 +102,6 @@ public class MySuffererController : MonoBehaviour {
                 wayPointPos = myWayPointRoom2SE[3].transform.position;
             }
 
-
-
         }
         else if(_newPhase == ePhase.eRoom2)
         {
@@ -156,6 +155,7 @@ public class MySuffererController : MonoBehaviour {
 
         //iHP = (int)Random.Range(MinSpawnRangeHP, MaxSpawnRangeHP);
 
+        bRecoverHP = false;
         timeSpan = 0.0f;
         wayPointPos = myWayPointRoom1SE[0].transform.position;
         currentState = eMoveState.Move;
@@ -201,7 +201,8 @@ public class MySuffererController : MonoBehaviour {
             // TEMP
             if(phase == ePhase.eRoom2)
             {
-                fHP += 0.1f;
+                if(bRecoverHP == true)
+                    fHP += 0.1f;
 
                 if (fHP >= 100.0f)
                 {
@@ -258,13 +259,15 @@ public class MySuffererController : MonoBehaviour {
                     {
                         phase = ePhase.eRoom2;
                         wayPointPos = myWayPointsRoom2[iMyBedNumber].transform.position;
-                    } 
+                    }
                 }
                 else if (phase == ePhase.eRoom2)
                 {
                     //wayPointPos = myWayPointsRoom1[iMyBedNumber].transform.position;
                     //nowWayPointIdx++;
                     //nowWayPointIdx = (totalWayPointCnt > nowWayPointIdx) ? nowWayPointIdx : 0;
+
+                    bRecoverHP = true;
 
                     if (fHP >= 100.0f)
                     {
