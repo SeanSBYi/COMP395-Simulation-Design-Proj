@@ -12,6 +12,8 @@ public class SpawnManager : MonoBehaviour {
     public GameObject RegularSpawnPoint;
     public GameObject EmergencySpawnPoint;
 
+    private Vector3 spawnPointV3;
+
     public int MaxSufferer = 10;
 
     public int iNowSuffererCnt;
@@ -21,9 +23,16 @@ public class SpawnManager : MonoBehaviour {
         if (enableSpawn && (MaxSufferer > iNowSuffererCnt))
         {
             iNowSuffererCnt++;
-            GameObject sufferer = Instantiate(Sufferer, new Vector3(-12.0f, 0f, 0f), Quaternion.identity);
 
             int conditionRnd = Random.Range(0, 100);
+
+            if (conditionRnd > 30)
+                spawnPointV3 = RegularSpawnPoint.transform.position;
+            else
+                spawnPointV3 = EmergencySpawnPoint.transform.position;
+
+            GameObject sufferer = Instantiate(Sufferer, spawnPointV3, Quaternion.identity);
+
             if (conditionRnd > 65)
             {
                 sufferer.GetComponent<MySuffererController>().SetCondition(MySuffererController.eCondition.eGreen);
@@ -36,7 +45,9 @@ public class SpawnManager : MonoBehaviour {
             {
                 sufferer.GetComponent<MySuffererController>().SetCondition(MySuffererController.eCondition.eRed);
             }
+            
         }
+
         float rnd = Random.Range(MinSpawnRangeTime, MaxSpawnRangeTime);
         Invoke("SpawnSufferer", rnd);
     }

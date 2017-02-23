@@ -39,9 +39,10 @@ public class MySuffererController : MonoBehaviour {
 
     private Vector3 wayPointPos;
     private Vector3 currentPos;
-    private float speed = 3.0f;
+    public float speed = 10.0f;
 
     private float fHP;
+
 
     private float MinSpawnRangeHP = 5.0f;
     private float MaxSpawnRangeHP = 95.0f;
@@ -77,11 +78,31 @@ public class MySuffererController : MonoBehaviour {
     {
         if (_newPhase == ePhase.eRoom2Pre)
         {
-            wayPointPos = myWayPointRoom2SE[0].transform.position;
-            totalWayPointCnt = myWayPointsRoom2.Length;
-
             //iMyBedNumber = ( opt != -1) ? opt : 0;
             iMyBedNumber = opt;
+
+            //wayPointPos = myWayPointRoom2SE[0].transform.position;
+            totalWayPointCnt = myWayPointsRoom2.Length;
+            
+            if( iMyBedNumber == 0 || iMyBedNumber == 1)
+            {
+                wayPointPos = myWayPointRoom2SE[0].transform.position;
+            }
+            else if (iMyBedNumber == 2 || iMyBedNumber == 3)
+            {
+                wayPointPos = myWayPointRoom2SE[1].transform.position;
+            }
+            else if (iMyBedNumber == 4 || iMyBedNumber == 5)
+            {
+                wayPointPos = myWayPointRoom2SE[2].transform.position;
+            }
+            else if (iMyBedNumber == 6 || iMyBedNumber == 7)
+            {
+                wayPointPos = myWayPointRoom2SE[3].transform.position;
+            }
+
+
+
         }
         else if(_newPhase == ePhase.eRoom2)
         {
@@ -185,7 +206,25 @@ public class MySuffererController : MonoBehaviour {
                 if (fHP >= 100.0f)
                 {
                     phase = ePhase.eExit;
-                    wayPointPos = myWayPointRoom2SE[1].transform.position;
+                    //wayPointPos = myWayPointRoom2SE[1].transform.position;
+
+                    if (iMyBedNumber == 0 || iMyBedNumber == 1)
+                    {
+                        wayPointPos = myWayPointRoom2SE[0].transform.position;
+                    }
+                    else if (iMyBedNumber == 2 || iMyBedNumber == 3)
+                    {
+                        wayPointPos = myWayPointRoom2SE[1].transform.position;
+                    }
+                    else if (iMyBedNumber == 4 || iMyBedNumber == 5)
+                    {
+                        wayPointPos = myWayPointRoom2SE[2].transform.position;
+                    }
+                    else if (iMyBedNumber == 6 || iMyBedNumber == 7)
+                    {
+                        wayPointPos = myWayPointRoom2SE[3].transform.position;
+                    }
+
                     GameObject findManager = GameObject.Find("SimulationManager");
                     findManager.GetComponent<SimulationManager>().SetEmptyBedStatus(iMyBedNumber, false);
                 }
@@ -230,7 +269,24 @@ public class MySuffererController : MonoBehaviour {
                     if (fHP >= 100.0f)
                     {
                         phase = ePhase.eExit;
-                        wayPointPos = myWayPointRoom2SE[1].transform.position;
+                        //wayPointPos = myWayPointRoom2SE[1].transform.position;
+                        if (iMyBedNumber == 0 || iMyBedNumber == 1)
+                        {
+                            wayPointPos = myWayPointRoom2SE[0].transform.position;
+                        }
+                        else if (iMyBedNumber == 2 || iMyBedNumber == 3)
+                        {
+                            wayPointPos = myWayPointRoom2SE[1].transform.position;
+                        }
+                        else if (iMyBedNumber == 4 || iMyBedNumber == 5)
+                        {
+                            wayPointPos = myWayPointRoom2SE[2].transform.position;
+                        }
+                        else if (iMyBedNumber == 6 || iMyBedNumber == 7)
+                        {
+                            wayPointPos = myWayPointRoom2SE[3].transform.position;
+                        }
+
                         GameObject findManager = GameObject.Find("SimulationManager");
                         findManager.GetComponent<SimulationManager>().SetEmptyBedStatus(iMyBedNumber, false);
                     }

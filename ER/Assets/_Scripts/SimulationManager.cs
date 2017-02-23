@@ -11,8 +11,8 @@ public class SimulationManager : MonoBehaviour {
     //}
     //private stWay[] waypoint;
 
-    public int totalBedCnt = 4;
-    private bool[] isOccupy = new bool[4];
+    public int totalBedCnt = 8;
+    private bool[] isOccupy = new bool[8];
 
     private GameObject[] objPatientList;
 
@@ -24,6 +24,11 @@ public class SimulationManager : MonoBehaviour {
     public void ToggleEmptyBed(int _idx)
     {
         isOccupy[_idx] = (isOccupy[_idx] == true) ? false : true;
+    }
+
+    public bool GetOccupy(int _idx)
+    {
+        return isOccupy[((totalBedCnt > _idx) ? _idx : totalBedCnt)];
     }
 
     // Use this for initialization

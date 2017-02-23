@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ER_Simulation", "ER_Simulation.csproj", "{AA206199-48C3-41CF-DFB1-1DBEBA3F5422}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ER_Simulation.Editor", "ER_Simulation.Editor.csproj", "{14D53EB3-27CF-5AE4-8F87-4900E90B361C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA206199-48C3-41CF-DFB1-1DBEBA3F5422}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA206199-48C3-41CF-DFB1-1DBEBA3F5422}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA206199-48C3-41CF-DFB1-1DBEBA3F5422}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA206199-48C3-41CF-DFB1-1DBEBA3F5422}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14D53EB3-27CF-5AE4-8F87-4900E90B361C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14D53EB3-27CF-5AE4-8F87-4900E90B361C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14D53EB3-27CF-5AE4-8F87-4900E90B361C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14D53EB3-27CF-5AE4-8F87-4900E90B361C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
